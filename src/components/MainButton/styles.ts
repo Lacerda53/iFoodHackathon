@@ -13,10 +13,13 @@ export const Container = styled.TouchableOpacity<ContainerProps>`
     background: ${({ theme, isOutline }) => isOutline ? theme.colors.white : theme.colors.primary};
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    z-index: 50;
     ${({ isFooter }) => isFooter && css`
         position: absolute;
         bottom: 0;
         height: ${(Platform.OS === 'ios' ? 45 : 56) + getBottomSpace()}px;
         padding-bottom: ${Platform.OS === 'ios' ? 15 : 0}px;
+        border-radius: 0;
     `}
 `;

@@ -4,6 +4,7 @@ import { useFonts } from 'expo-font';
 import { Routes } from './src/routes';
 import { ThemeProvider } from 'styled-components/native';
 import { theme } from './src/global/theme';
+import { LogBox } from 'react-native';
 
 const App: React.FC = () => {
 	let [fontsLoaded] = useFonts({
@@ -11,6 +12,8 @@ const App: React.FC = () => {
 		'Sul-Sans-Light': require('./assets/fonts/Light.otf'),
 		'Sul-Sans-Regular': require('./assets/fonts/Regular.otf'),
 	});
+
+	LogBox.ignoreAllLogs();
 
 	if (!fontsLoaded) {
 
