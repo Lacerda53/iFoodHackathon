@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { BagScreen } from '../screens/BagScreen';
 import { RecipeScreen } from '../screens/RecipeScreen';
 import { theme } from '../global/theme';
+import { RecipeDetailsScreen } from '../screens/RecipeScreen/RecipeDetailsScreen';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,14 @@ export const StackRoutes: React.FC = () => {
 				name='RecipeScreen'
 				options={{ title: 'Receitas' }}
 				component={RecipeScreen}
+			/>
+			<Stack.Screen
+				name='RecipeDetailsScreen'
+				options={{
+					title: '',
+					headerShown: false
+				}}
+				component={RecipeDetailsScreen}
 			/>
 		</Stack.Navigator>
 	);

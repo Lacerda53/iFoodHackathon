@@ -13,6 +13,6 @@ export const Content = styled.View`
 `;
 
 export const ItemImage = styled.Image`
-    width: ${width / 6}px;
+    width: ${width / 5}px;
     height: 100%;
 `;
