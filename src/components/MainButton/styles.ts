@@ -19,5 +19,4 @@ export const Container = styled.TouchableOpacity<ContainerProps>`
         height: ${(Platform.OS === 'ios' ? 45 : 56) + getBottomSpace()}px;
         padding-bottom: ${Platform.OS === 'ios' ? 15 : 0}px;
     `}
-    
 `;

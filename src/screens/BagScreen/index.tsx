@@ -6,6 +6,7 @@ import { CustomText } from '../../components/CustomText';
 import { Divider } from '../../components/Divider';
 import { ItemCart } from '../../components/ItemCart';
 import { MainButton } from '../../components/MainButton';
+import { ToastBottom } from '../../components/ToastBottom';
 import {
     ArrowHeader,
     Container,
@@ -67,6 +68,7 @@ export const BagScreen: React.FC = () => {
                 />
                 <Divider />
             </Content>
+            <ToastBottom />
             <MainButton isFooter>
                 Continuar
             </MainButton>

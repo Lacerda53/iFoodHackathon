@@ -5,9 +5,6 @@ import { Container } from './styles';
 export const RecipeScreen: React.FC = () => {
     return (
         <Container>
-            <MainButton>
-                Continuar
-            </MainButton>
         </Container>
     );
 };
