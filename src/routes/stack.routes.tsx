@@ -10,7 +10,7 @@ const Stack = createStackNavigator();
 export const StackRoutes: React.FC = () => {
 	return (
 		<Stack.Navigator
-			initialRouteName='RecipeScreen'
+			initialRouteName='BagScreen'
 			screenOptions={{
 				headerTitleStyle: {
 					fontFamily: theme.fonts.regular,

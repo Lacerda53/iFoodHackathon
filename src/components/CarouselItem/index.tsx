@@ -3,25 +3,29 @@ import React from 'react';
 import { CustomText } from '../CustomText';
 import {
    Container,
+   ImageItem,
    MainContent
 } from './styles';
 
-export type Props = {
-   index?: number;
-   imgPath?: string;
-   cardTxt?: string;
-
+type Props = {
+   index: number;
+   disabled?: boolean;
 }
 
-export const CarouselItem: React.FC<Props> = ({ children, ...rest}) => {
+export const CarouselItem: React.FC<Props> = ({ index, disabled }) => {
    return (
-      <Container >
-         <MainContent {...rest}/>
+      <Container disabled={disabled} activeOpacity={.8}>
+         <MainContent index={index}>
+            <ImageItem
+               source={{ uri: 'https://vapza.vteximg.com.br/arquivos/ids/155604/bowl-feijoada.png' }}
+               resizeMode='contain'
+            />
+         </MainContent>
          <CustomText
             align='center'
             color='gray'
          >
-            {children}
+            Frango à parmegiana
          </CustomText>
 
       </Container>

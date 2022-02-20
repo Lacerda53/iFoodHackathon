@@ -1,13 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { FlatList } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Modalize } from 'react-native-modalize';
 import { CustomText } from '../../components/CustomText';
 import { Divider } from '../../components/Divider';
 import { ItemCart } from '../../components/ItemCart';
 import { MainButton } from '../../components/MainButton';
-import { ModalFilter } from '../../components/ModalFilter';
 import { ToastBottom } from '../../components/ToastBottom';
 import {
     ArrowHeader,
@@ -18,12 +16,7 @@ import {
 } from './styles';
 
 export const BagScreen: React.FC = () => {
-    const modalizeRef = useRef<Modalize>(null);
     const { setOptions } = useNavigation();
-
-    const onOpen = () => {
-        modalizeRef.current?.open();
-    };
 
     useEffect(() => {
         setOptions({
@@ -84,11 +77,10 @@ export const BagScreen: React.FC = () => {
                     <Divider />
                 </Content>
                 <ToastBottom />
-                <MainButton isFooter onPress={onOpen}>
+                <MainButton isFooter>
                     Continuar
                 </MainButton>
             </Container>
-            <ModalFilter modalizeRef={modalizeRef} />
         </>
     );
 };

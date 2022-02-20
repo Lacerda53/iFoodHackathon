@@ -1,7 +1,8 @@
 import React, { Ref } from 'react';
 import { Dimensions } from 'react-native';
 import { Modalize, ModalizeProps } from 'react-native-modalize';
-import { Container } from './styles';
+import { CustomText } from '../CustomText';
+import { ArrowHeader, Container, Header } from './styles';
 
 const { height } = Dimensions.get('window');
 
@@ -21,7 +22,15 @@ export const ModalFilter: React.FC<Props> = ({ modalizeRef, ...rest }) => {
             {...rest}
         >
             <Container>
-
+                <Header>
+                    <ArrowHeader />
+                    <CustomText>Filtros</CustomText>
+                    <CustomText
+                        color='primary'
+                    >
+                        Limpar
+                    </CustomText>
+                </Header>
             </Container>
         </Modalize>
     );
