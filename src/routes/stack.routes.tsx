@@ -9,7 +9,7 @@ const Stack = createStackNavigator();
 export const StackRoutes: React.FC = () => {
 	return (
 		<Stack.Navigator
-			initialRouteName='BagScreen'
+			initialRouteName='RecipeScreen'
 			screenOptions={{
 				headerTitleStyle: {
 					fontFamily: theme.fonts.regular,
@@ -27,7 +27,7 @@ export const StackRoutes: React.FC = () => {
 			/>
 			<Stack.Screen
 				name='RecipeScreen'
-				options={{ title: 'Receita' }}
+				options={{ title: 'Receitas' }}
 				component={RecipeScreen}
 			/>
 		</Stack.Navigator>
