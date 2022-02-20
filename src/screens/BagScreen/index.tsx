@@ -62,7 +62,7 @@ export const BagScreen: React.FC = () => {
                     keyExtractor={(_, index) => String(index)}
                     data={[0, 0, 0, 0, 0, 0]}
                     showsVerticalScrollIndicator={false}
-                    contentContainerStyle={{ paddingBottom: 80 }}
+                    contentContainerStyle={{ paddingBottom: 230 }}
                     renderItem={({ item }) => <ItemCart />}
                     ListFooterComponent={<MainButton isOutline>Adicionar mais itens</MainButton>}
                 />
