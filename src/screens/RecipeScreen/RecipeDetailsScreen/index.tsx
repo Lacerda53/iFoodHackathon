@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { FlatList } from 'react-native';
 import { CardHero } from '../../../components/CardHero';
@@ -36,9 +37,11 @@ const data = [
 ]
 
 export const RecipeDetailsScreen: React.FC = () => {
+    const { goBack } = useNavigation();
+
     return (
         <Container contentContainerStyle={{ paddingBottom: 20 }}>
-            <HeaderButton>
+            <HeaderButton activeOpacity={.8} onPress={goBack}>
                 <ArrowHeader stroke='#757575' />
             </HeaderButton>
             <Header>

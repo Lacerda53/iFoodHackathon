@@ -20,8 +20,7 @@ export const ItemCart: React.FC<Props> = ({
         <>
             <Container>
                 <Content>
-                    <CustomText
-                    >
+                    <CustomText>
                         {name}
                     </CustomText>
                     <CustomText
